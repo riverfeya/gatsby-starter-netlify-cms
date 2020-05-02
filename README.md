@@ -2,25 +2,25 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b654c94e-08a6-4b79-b443-7837581b1d8d/deploy-status)](https://app.netlify.com/sites/gatsby-starter-netlify-cms-ci/deploys)
 
-**Note:** This starter uses [Gatsby v2](https://www.gatsbyjs.org/blog/2018-09-17-gatsby-v2/).
+**Note:** Этот стартер использует [Gatsby v2](https://www.gatsbyjs.org/blog/2018-09-17-gatsby-v2/).
 
-This repo contains an example business website that is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org): **[Demo Link](https://gatsby-netlify-cms.netlify.com/)**.
+Этот репо содержит пример бизнес-сайта, который построен с [Gatsby](https://www.gatsbyjs.org/), и [Netlify CMS](https://www.netlifycms.org): **[Demo Link](https://gatsby-netlify-cms.netlify.com/)**.
 
-It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
+Следует [JAMstack architecture](https://jamstack.org) используя Git как единственный источник правды, и [Netlify](https://www.netlify.com) для непрерывного развертывания и распространения CDN.
 
 ## Features
 
-- A simple landing page with blog functionality built with Netlify CMS
-- Editabe Pages: Landing, About, Product, Blog-Collection and Contact page with Netlify Form support
-- Create Blog posts from Netlify CMS
-- Tags: Separate page for posts under each tag
+- Простая целевая страница с функциональностью блога, созданная с Netlify CMS
+- Editabe Pages: Landing, About, Product, Blog-Collection и Contact page с поддержкой Netlify
+- Create Blog posts из Netlify CMS
+- Tags: Отдельная страница для постов под каждым тегом
 - Basic directory organization
-- Uses Bulma for styling, but size is reduced by `purge-css-plugin`
+- Использует Bulma для стилей, но размер уменьшен by `purge-css-plugin`
 - Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
 - Uses `gatsby-image` with Netlify-CMS preview support
 - Separate components for everything
 - Netlify deploy configuration
-- Netlify function support, see `lambda` folder
+- Netlify function support, см папку `lambda`
 - Perfect score on Lighthouse for SEO, Accessibility and Performance (wip:PWA)
 - ..and more
 
@@ -32,15 +32,15 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 
 ## Getting Started (Recommended)
 
-Netlify CMS can run in any frontend web environment, but the quickest way to try it out is by running it on a pre-configured starter site with Netlify. The example here is the Kaldi coffee company template (adapted from [One Click Hugo CMS](https://github.com/netlify-templates/one-click-hugo-cms)). Use the button below to build and deploy your own copy of the repository:
+Netlify CMS может работать в любой веб-среде интерфейса, но самый быстрый способ попробовать это - запустить его на предварительно настроенном начальном сайте с Netlify. Примером здесь является Kaldi coffee company template (adapted from [One Click Hugo CMS](https://github.com/netlify-templates/one-click-hugo-cms)). Используйте кнопку ниже, чтобы создать и развернуть свою собственную копию хранилища:
 
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/gatsby-starter-netlify-cms&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
-After clicking that button, you’ll authenticate with GitHub and choose a repository name. Netlify will then automatically create a repository in your GitHub account with a copy of the files from the template. Next, it will build and deploy the new site on Netlify, bringing you to the site dashboard when the build is complete. Next, you’ll need to set up Netlify’s Identity service to authorize users to log in to the CMS.
+После нажатия этой кнопки вы авторизуетесь в GitHub и выбираете имя репозитория. Netlify автоматически создаст хранилище в вашей учетной записи GitHub с копией файлов из шаблона. Затем он создаст и развернет новый сайт на Netlify, после чего вы попадете на панель мониторинга сайта после завершения сборки. Затем вам нужно настроить службу идентификации Netlify, чтобы авторизовать пользователей для входа в CMS.
 
 ### Access Locally
 
-Pulldown a local copy of the Github repository Netlify created for you, with the name you specified in the previous step
+Разверните локальную копию Gitub репозитория Netlify, созданную для вас, с именем, которое вы указали на предыдущем шаге
 ```
 $ git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
 $ cd [REPO_NAME]
@@ -48,9 +48,9 @@ $ yarn
 $ netlify dev # or ntl dev
 ```
 
-This uses the new [Netlify Dev](https://www.netlify.com/products/dev/?utm_source=blog&utm_medium=netlifycms&utm_campaign=devex) CLI feature to serve any functions you have in the `lambda` folder.
+Это использует новый [Netlify Dev](https://www.netlify.com/products/dev/?utm_source=blog&utm_medium=netlifycms&utm_campaign=devex) CLI feature чтобы выполнять любые функции, которые у вас есть в папке `lambda`.
 
-To test the CMS locally, you'll need to run a production build of the site:
+Для локального тестирования CMS вам необходимо запустить производственную сборку сайта:
 
 ```
 $ npm run build
@@ -59,7 +59,7 @@ $ netlify dev # or ntl dev
 
 ### Media Libraries (installed, but optional)
 
-Media Libraries have been included in this starter as a default. If you are not planning to use `Uploadcare` or `Cloudinary` in your project, you **can** remove them from module import and registration in `src/cms/cms.js`. Here is an example of the lines to comment or remove them your project.
+Media Libraries были включены в этот стартер по умолчанию. Если вы не планируете использовать `Uploadcare` или `Cloudinary` в вашем проекте вы **можете** удалить их из модуля импорта и регистрации в `src/cms/cms.js`. Вот пример строк для комментирования или удаления из вашего проекта.
 
 ```javascript
 import CMS from 'netlify-cms-app'
@@ -80,7 +80,7 @@ CMS.registerPreviewTemplate('products', ProductPagePreview)
 CMS.registerPreviewTemplate('blog', BlogPostPreview)
 ```
 
-Note: Don't forget to also remove them from `package.json` and `yarn.lock` / `package-lock.json` using `yarn` or `npm`. During the build netlify-cms-app will bundle the media libraries as well, having them removed will save you build time.
+Note: Не забудьте также удалить их из `package.json` и `yarn.lock` / `package-lock.json` using `yarn` or `npm`. Во время сборки netlify-cms-app также объединит библиотеки мультимедиа, удаление их сэкономит вам время сборки.
 Example:
 ```
 yarn remove netlify-cms-media-library-uploadcare
@@ -100,11 +100,11 @@ $ npm run serve
 
 ### Setting up the CMS
 
-Follow the [Netlify CMS Quick Start Guide](https://www.netlifycms.org/docs/quick-start/#authentication) to set up authentication, and hosting.
+Следуйте [Netlify CMS Quick Start Guide](https://www.netlifycms.org/docs/quick-start/#authentication) настроить аутентификацию и хостинг.
 
 ## Debugging
 
-Windows users might encounter `node-gyp` errors when trying to npm install.
+Пользователи Windows могут столкнуться `node-gyp` errors when trying to npm install.
 To resolve, make sure that you have both Python 2.7 and the Visual C++ build environment installed.
 
 ```
